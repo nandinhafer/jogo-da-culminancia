@@ -1,0 +1,71 @@
+const C3 = self.C3;
+self.C3_GetObjectRefTable = function () {
+	return [
+		C3.Plugins.TiledBg,
+		C3.Plugins.Tilemap,
+		C3.Plugins.Sprite,
+		C3.Behaviors.solid,
+		C3.Behaviors.scrollto,
+		C3.Behaviors.Platform,
+		C3.Plugins.Text,
+		C3.Plugins.Button,
+		C3.Plugins.Audio,
+		C3.Plugins.System.Cnds.IsGroupActive,
+		C3.Plugins.Sprite.Cnds.OnCollision,
+		C3.Behaviors.Platform.Acts.SetDefaultControls,
+		C3.Plugins.System.Acts.Wait,
+		C3.Plugins.System.Acts.GoToLayout,
+		C3.Plugins.Button.Cnds.OnClicked,
+		C3.Plugins.System.Cnds.OnLayoutStart,
+		C3.Plugins.Audio.Cnds.IsTagPlaying,
+		C3.Plugins.Audio.Acts.Play,
+		C3.Plugins.System.Cnds.Else,
+		C3.Plugins.Audio.Acts.StopAll
+	];
+};
+self.C3_JsPropNameTable = [
+	{fundo: 0},
+	{fundo_chao: 0},
+	{Solid: 0},
+	{sensor: 0},
+	{ScrollTo: 0},
+	{Platform: 0},
+	{personagem: 0},
+	{obstaculo_sensor: 0},
+	{fim: 0},
+	{ganhou: 0},
+	{ganhoutexto: 0},
+	{ganhoubutton: 0},
+	{telaInicial: 0},
+	{inicialtexto: 0},
+	{iniciarbutton: 0},
+	{perdeu: 0},
+	{perdeutexto: 0},
+	{perdeubutton: 0},
+	{Audio: 0},
+	{Tilemap: 0},
+	{chao2: 0},
+	{Tilemap2: 0}
+];
+
+self.InstanceType = {
+	fundo: class extends self.ITiledBackgroundInstance {},
+	fundo_chao: class extends self.ITilemapInstance {},
+	sensor: class extends self.ISpriteInstance {},
+	personagem: class extends self.ISpriteInstance {},
+	obstaculo_sensor: class extends self.ISpriteInstance {},
+	fim: class extends self.ISpriteInstance {},
+	ganhou: class extends self.ITiledBackgroundInstance {},
+	ganhoutexto: class extends self.ITextInstance {},
+	ganhoubutton: class extends self.IButtonInstance {},
+	telaInicial: class extends self.ITiledBackgroundInstance {},
+	inicialtexto: class extends self.ITextInstance {},
+	iniciarbutton: class extends self.IButtonInstance {},
+	perdeu: class extends self.ITiledBackgroundInstance {},
+	perdeutexto: class extends self.ITextInstance {},
+	perdeubutton: class extends self.IButtonInstance {},
+	Audio: class extends self.IInstance {},
+	Tilemap: class extends self.ITilemapInstance {},
+	chao2: class extends self.ITilemapInstance {},
+	Tilemap2: class extends self.ITilemapInstance {}
+}
